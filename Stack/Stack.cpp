@@ -31,14 +31,15 @@ public:
 		/*Node* Temp = new Node(Data);
 		Temp->pNext = Head;
 		Head = Temp;*/
+		size++;
 		
 	}
 	void pop()
 	{
 		if (Head == nullptr)return;		
-		Node* Temp = Head;		
-		Head = Temp->pNext;	
-		delete Temp;
+		Node* old = Head;		
+		Head = Head->pNext;	
+		delete old;
 		size--;
 	}
 
@@ -46,6 +47,15 @@ public:
 	{
 		return Head == nullptr;
 	}	
+	void print()const
+	{
+		Node* Temp = Head;
+		while (Temp!=nullptr)
+		{
+         cout<< Temp << tab << Temp->Data << tab << Temp->pNext << endl;
+		 Temp = Temp->pNext;
+		}
+	}
 	
 };
 
@@ -63,7 +73,7 @@ int main()
 		cout << s.top() << endl;
 		s.pop();
 	}	
-	//s.pop();
+	
 	
 
 }
