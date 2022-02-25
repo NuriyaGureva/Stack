@@ -15,7 +15,7 @@ class Stack
 		~Node()	{}
 
 	}*Head;
-
+	unsigned int size;
 public:
 
 	Stack()
@@ -33,12 +33,13 @@ public:
 		Head = Temp;*/
 		
 	}
-	void pop_front()
+	void pop()
 	{
 		if (Head == nullptr)return;		
 		Node* Temp = Head;		
 		Head = Temp->pNext;	
-		delete Temp;		
+		delete Temp;
+		size--;
 	}
 
 	bool empty()
@@ -53,13 +54,17 @@ int main()
 	setlocale(LC_ALL, "");
 
 	stack<int> s;
-	for (int i =1; i<10; i++)
+    //s.push(10);
+
+	for (int i =0; i < 5; i++)
 		s.push(i);
 	
 	while (!s.empty()) {
 		cout << s.top() << endl;
 		s.pop();
 	}	
+	//s.pop();
 	
+
 }
 
