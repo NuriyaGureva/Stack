@@ -28,9 +28,9 @@ public:
 	void push(int Data)
 	{
 		Head = new Node(Data, Head);
-		//Node* Temp = new Node(Data);
-		//Temp->pNext = Head;
-		//Head = Temp;
+		/*Node* Temp = new Node(Data);
+		Temp->pNext = Head;
+		Head = Temp;*/
 		
 	}
 	void pop_front()
