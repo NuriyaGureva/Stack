@@ -37,9 +37,9 @@ public:
 	void pop()
 	{
 		if (Head == nullptr)return;		
-		Node* old = Head;		
+		Node* top = Head;		
 		Head = Head->pNext;	
-		delete old;
+		delete top;
 		size--;
 	}
 
@@ -62,18 +62,18 @@ public:
 int main()
 {
 	setlocale(LC_ALL, "");
-
+	int n;
 	stack<int> s;
-    //s.push(10);
-
-	for (int i =0; i < 5; i++)
+	s.push(12);
+    s.push(10);	
+	for (int i =1; i <5; i++)
 		s.push(i);
+	cout << "Pазмер очереди\t" << s.size() << tab<<endl;
 	
 	while (!s.empty()) {
 		cout << s.top() << endl;
 		s.pop();
 	}	
-	
 	
 
 }
