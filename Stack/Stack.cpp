@@ -68,7 +68,7 @@ int main()
     s.push(10);	
 	for (int i =1; i <5; i++)
 		s.push(i);
-	cout << "Pазмер очереди\t" << s.size() << tab<<endl;
+	cout << "Pазмер очереди\t" << s.size() << tab <<endl;
 	
 	while (!s.empty()) {
 		cout << s.top() << endl;
